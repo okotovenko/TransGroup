@@ -900,6 +900,10 @@ input:focus {
   border-bottom: 1px solid #e5e9ed;
 }
 
+.menu-open .header {
+  opacity: 1;
+}
+
 .icon-menu {
   display: none;
 }
@@ -2794,7 +2798,6 @@ input:focus {
   text-transform: uppercase;
   width: 100%;
   max-width: 41.625rem;
-  white-space: nowrap;
   opacity: 0;
 }
 
@@ -4617,10 +4620,6 @@ button.swiper-pagination-bullet {
     gap: 6.25rem;
   }
 
-  .main-investors__how {
-    padding-bottom: 3.5rem;
-  }
-
   .why-investors {
     padding-bottom: 8.6875rem;
   }
@@ -5035,6 +5034,10 @@ button.swiper-pagination-bullet {
   .main-investors__img img {
     height: 28.5625rem;
   }
+
+  .main-investors__how {
+    padding-bottom: 3.5rem;
+  }
 }
 
 @media (max-width: 75em) {
@@ -5067,11 +5070,30 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 35em) {
   .main-investors__how {
+    top: 120px;
+    height: 180px;
     gap: 0.9375rem;
   }
 
   .main-investors__how .how__count {
     font-size: 32px;
+  }
+}
+
+@media (max-width: 420px) {
+  .main-investors__how {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    height: 240px;
+    top: 100px;
   }
 }
 
@@ -5416,10 +5438,6 @@ button.swiper-pagination-bullet {
 
   .main-investors__how {
     gap: 1.875rem;
-  }
-
-  .main-investors__how {
-    padding-bottom: 1.25rem;
   }
 
   .why-investors {
@@ -6736,21 +6754,6 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 26.25em) {
-  .main-investors__how {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    height: 240px;
-    top: 100px;
-  }
-
   .why-investors {
     padding-top: 160px;
   }
@@ -7792,18 +7795,6 @@ button.swiper-pagination-bullet {
 @supports not (gap: clamp( 1.875rem , 0.688559322rem  +  5.9322033898vw , 6.25rem )) {
     .main-investors__how {
       gap: calc(1.875rem + 4.375 * (100vw - 20rem) / 73.75);
-    }
-}
-
-@supports (padding-bottom: clamp( 1.25rem , 0.6398305085rem  +  3.0508474576vw , 3.5rem )) {
-    .main-investors__how {
-      padding-bottom: clamp( 1.25rem , 0.6398305085rem  +  3.0508474576vw , 3.5rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 1.25rem , 0.6398305085rem  +  3.0508474576vw , 3.5rem )) {
-    .main-investors__how {
-      padding-bottom: calc(1.25rem + 2.25 * (100vw - 20rem) / 73.75);
     }
 }
 
@@ -9010,6 +9001,18 @@ button.swiper-pagination-bullet {
       max-width: calc(32.5rem + 6.25 * (100vw - 62rem) / 58);
     }
 }
+
+@supports (padding-bottom: clamp( 1.25rem , -1.1551724138rem  +  3.8793103448vw , 3.5rem )) {
+    .main-investors__how {
+      padding-bottom: clamp( 1.25rem , -1.1551724138rem  +  3.8793103448vw , 3.5rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.25rem , -1.1551724138rem  +  3.8793103448vw , 3.5rem )) {
+    .main-investors__how {
+      padding-bottom: calc(1.25rem + 2.25 * (100vw - 62rem) / 58);
+    }
+}
 }
 
 @media (max-width: 61.99875em) and (min-width: 61.9375em) {
@@ -9200,42 +9203,6 @@ button.swiper-pagination-bullet {
 @supports not (height: clamp( 14.375rem , 12.3411016949rem  +  10.1694915254vw , 21.875rem )) {
     .main-investors__how {
       height: calc(14.375rem + 7.5 * (100vw - 20rem) / 73.75);
-    }
-}
-}
-
-@media (max-width: 35em) and (min-width: 35em) {
-  .main-investors__how {
-    top: 7.5rem;
-  }
-
-  .main-investors__how {
-    height: 11.25rem;
-  }
-}
-
-@media (max-width: 35em) and (min-width: 20em) and (max-width: 35em) {
-@supports (top: clamp( 5rem , 1.6666666667rem  +  16.6666666667vw , 7.5rem )) {
-    .main-investors__how {
-      top: clamp( 5rem , 1.6666666667rem  +  16.6666666667vw , 7.5rem );
-    }
-}
-
-@supports not (top: clamp( 5rem , 1.6666666667rem  +  16.6666666667vw , 7.5rem )) {
-    .main-investors__how {
-      top: calc(5rem + 2.5 * (100vw - 20rem) / 15);
-    }
-}
-
-@supports (height: clamp( 7.5rem , 2.5rem  +  25vw , 11.25rem )) {
-    .main-investors__how {
-      height: clamp( 7.5rem , 2.5rem  +  25vw , 11.25rem );
-    }
-}
-
-@supports not (height: clamp( 7.5rem , 2.5rem  +  25vw , 11.25rem )) {
-    .main-investors__how {
-      height: calc(7.5rem + 3.75 * (100vw - 20rem) / 15);
     }
 }
 }
