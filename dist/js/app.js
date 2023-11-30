@@ -378,6 +378,7 @@
                 setAutoplayYoutube: true,
                 classes: {
                     popup: "popup",
+                    popupWrapper: "popup__wrapper",
                     popupContent: "popup__content",
                     popupActive: "popup_show",
                     bodyActive: "popup-show"
@@ -386,8 +387,8 @@
                 closeEsc: true,
                 bodyLock: true,
                 hashSettings: {
-                    location: true,
-                    goHash: true
+                    location: false,
+                    goHash: false
                 },
                 on: {
                     beforeOpen: function() {},
@@ -473,14 +474,6 @@
                     return;
                 }
             }.bind(this));
-            if (this.options.hashSettings.goHash) {
-                window.addEventListener("hashchange", function() {
-                    if (window.location.hash) this._openToHash(); else this.close(this.targetOpen.selector);
-                }.bind(this));
-                window.addEventListener("load", function() {
-                    if (window.location.hash) this._openToHash();
-                }.bind(this));
-            }
         }
         open(selectorValue) {
             if (bodyLockStatus) {
@@ -510,10 +503,7 @@
                         }
                         this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).appendChild(iframe);
                     }
-                    if (this.options.hashSettings.location) {
-                        this._getHash();
-                        this._setHash();
-                    }
+                    if (this.options.hashSettings.location) ;
                     this.options.on.beforeOpen(this);
                     document.dispatchEvent(new CustomEvent("beforePopupOpen", {
                         detail: {
@@ -574,33 +564,11 @@
             }), 50);
             this.popupLogging(`Закрыл попап`);
         }
-        _getHash() {
-            if (this.options.hashSettings.location) this.hash = this.targetOpen.selector.includes("#") ? this.targetOpen.selector : this.targetOpen.selector.replace(".", "#");
-        }
-        _openToHash() {
-            let classInHash = document.querySelector(`.${window.location.hash.replace("#", "")}`) ? `.${window.location.hash.replace("#", "")}` : document.querySelector(`${window.location.hash}`) ? `${window.location.hash}` : null;
-            const buttons = document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`) ? document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`) : document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash.replace(".", "#")}"]`);
-            if (buttons && classInHash) this.open(classInHash);
-        }
-        _setHash() {
-            history.pushState("", "", this.hash);
-        }
-        _removeHash() {
-            history.pushState("", "", window.location.href.split("#")[0]);
-        }
-        _focusCatch(e) {
-            const focusable = this.targetOpen.element.querySelectorAll(this._focusEl);
-            const focusArray = Array.prototype.slice.call(focusable);
-            const focusedIndex = focusArray.indexOf(document.activeElement);
-            if (e.shiftKey && focusedIndex === 0) {
-                focusArray[focusArray.length - 1].focus();
-                e.preventDefault();
-            }
-            if (!e.shiftKey && focusedIndex === focusArray.length - 1) {
-                focusArray[0].focus();
-                e.preventDefault();
-            }
-        }
+        _getHash() {}
+        _openToHash() {}
+        _setHash() {}
+        _removeHash() {}
+        _focusCatch(e) {}
         _focusTrap() {
             const focusable = this.previousOpen.element.querySelectorAll(this._focusEl);
             if (!this.isOpen && this.lastFocusEl) this.lastFocusEl.focus(); else focusable[0].focus();

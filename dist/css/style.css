@@ -1979,7 +1979,7 @@ input:focus {
 .steps__items :nth-child(4).steps__item .steps__arrow-small {
   position: absolute;
   left: 0;
-  top: 22px;
+  top: 17px;
 }
 
 .steps__items :nth-child(5).steps__item .steps__top {
@@ -2428,12 +2428,10 @@ input:focus {
      -moz-column-gap: 3.4375rem;
           column-gap: 3.4375rem;
   row-gap: 5rem;
-  opacity: 0;
 }
 
-.why-investors__items.animation {
-  -webkit-animation: right 0.6s 0.4s linear both;
-          animation: right 0.6s 0.4s linear both;
+.why-investors__item {
+  opacity: 0;
 }
 
 .why-investors__item h3 {
@@ -2445,6 +2443,11 @@ input:focus {
   text-transform: uppercase;
   margin-bottom: 0.8125rem;
   text-align: left;
+}
+
+.why-investors__item.animation {
+  -webkit-animation: right 0.6s 0.4s linear both;
+          animation: right 0.6s 0.4s linear both;
 }
 
 .why-investors__text p {
@@ -2803,12 +2806,6 @@ input:focus {
 .main--park__right {
   width: 100%;
   max-width: 40.625rem;
-  opacity: 0;
-}
-
-.main--park__right.animation {
-  -webkit-animation: left 0.8s 1.2s linear both;
-          animation: left 0.8s 1.2s linear both;
 }
 
 .main--park__list {
@@ -2821,18 +2818,25 @@ input:focus {
           flex-direction: column;
 }
 
-.no-webp .main--park__item{
-  background: url("../img/requirements/ok.png") left center/24px 18px no-repeat; }
-
 .main--park__item {
-  padding-left: 3.125rem;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #000000;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-align: left;
+  opacity: 0;
+}
+
+.main--park__item.animation {
+  -webkit-animation: left 0.3s 0.6s linear both;
+          animation: left 0.3s 0.6s linear both;
 }
 
 .understand--park__container h2 {
@@ -2861,36 +2865,6 @@ input:focus {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.understand--park__items :first-child.understand--park__item.animation {
-  -webkit-animation: right 0.2s 0.2s linear both;
-          animation: right 0.2s 0.2s linear both;
-}
-
-.understand--park__items :nth-child(2).understand--park__item.animation {
-  -webkit-animation: right 0.2s 0.4s linear both;
-          animation: right 0.2s 0.4s linear both;
-}
-
-.understand--park__items :nth-child(3).understand--park__item.animation {
-  -webkit-animation: right 0.2s 0.6s linear both;
-          animation: right 0.2s 0.6s linear both;
-}
-
-.understand--park__items :nth-child(4).understand--park__item.animation {
-  -webkit-animation: right 0.2s 0.8s linear both;
-          animation: right 0.2s 0.8s linear both;
-}
-
-.understand--park__items :nth-child(5).understand--park__item.animation {
-  -webkit-animation: right 0.2s 1s linear both;
-          animation: right 0.2s 1s linear both;
-}
-
-.understand--park__items :nth-child(6).understand--park__item.animation {
-  -webkit-animation: right 0.2s 1.2s linear both;
-          animation: right 0.2s 1.2s linear both;
-}
-
 .understand--park__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2899,6 +2873,11 @@ input:focus {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
+}
+
+.understand--park__item.animation {
+  -webkit-animation: right 0.2s 0.4s linear both;
+          animation: right 0.2s 0.4s linear both;
 }
 
 .understand--park__text {
@@ -2961,12 +2940,6 @@ input:focus {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  opacity: 0;
-}
-
-.operation--park__right.animation {
-  -webkit-animation: left 0.2s 0.4s linear both;
-          animation: left 0.2s 0.4s linear both;
 }
 
 .operation--park__item {
@@ -2977,6 +2950,12 @@ input:focus {
       -ms-flex-align: center;
           align-items: center;
   gap: 1.875rem;
+  opacity: 0;
+}
+
+.operation--park__item.animation {
+  -webkit-animation: left 0.2s 0.4s linear both;
+          animation: left 0.2s 0.4s linear both;
 }
 
 .operation--park__text p {
@@ -3013,21 +2992,21 @@ input:focus {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.25rem;
-  opacity: 0;
-}
-
-.business--park__items.animation {
-  -webkit-animation: left 0.2s 0.4s linear both;
-          animation: left 0.2s 0.4s linear both;
 }
 
 .business--park__item {
   position: relative;
   text-align: left;
+  opacity: 0;
 }
 
 .business--park__item:not(:first-child) {
   border-left: 1px solid rgba(208, 208, 208, 0.75);
+}
+
+.business--park__item.animation {
+  -webkit-animation: left 0.2s 0.4s linear both;
+          animation: left 0.2s 0.4s linear both;
 }
 
 .business--park__text p {
@@ -4754,6 +4733,10 @@ button.swiper-pagination-bullet {
     font-size: 1.5rem;
   }
 
+  .main--park__item {
+    gap: 2.1875rem;
+  }
+
   .understand--park {
     padding-bottom: 7.5rem;
   }
@@ -5551,6 +5534,10 @@ button.swiper-pagination-bullet {
     font-size: 0.875rem;
   }
 
+  .main--park__item {
+    gap: 0.9375rem;
+  }
+
   .understand--park {
     padding-bottom: 1.25rem;
   }
@@ -5763,18 +5750,22 @@ button.swiper-pagination-bullet {
             transform: rotate(45deg);
   }
 
+  .sub-menu__list > li {
+    padding: 0;
+  }
+
   .sub-menu__list {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
     position: relative;
-    gap: 3.125rem;
+    gap: 1.875rem;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     padding: 0;
     width: 100%;
-    padding-top: 50px;
+    padding-top: 30px;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
@@ -5791,9 +5782,8 @@ button.swiper-pagination-bullet {
     background: #ffffff;
     z-index: 3;
     display: block;
-    margin-top: 6.25rem;
-    padding-top: 3.125rem;
-    padding-bottom: 6.25rem;
+    margin-top: 6.125rem;
+    padding-bottom: 9.375rem;
   }
 
   .menu-open .menu__body {
@@ -5811,7 +5801,7 @@ button.swiper-pagination-bullet {
         -ms-flex-direction: column;
             flex-direction: column;
     padding-top: 0px;
-    gap: 3.125rem;
+    gap: 1.875rem;
   }
 
   .menu__item {
@@ -5821,7 +5811,9 @@ button.swiper-pagination-bullet {
 
   .menu__link,
   .menu__sub-link {
-    font-size: 30px;
+    font-size: 24px;
+    width: 100%;
+    display: block;
   }
 
   .footer__container {
@@ -6173,6 +6165,7 @@ button.swiper-pagination-bullet {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    white-space: normal;
   }
 
   .main-investors__how {
@@ -6558,6 +6551,10 @@ button.swiper-pagination-bullet {
         justify-self: center;
   }
 
+  .question__phone {
+    top: 60px;
+  }
+
   .question__buttons {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -6596,6 +6593,12 @@ button.swiper-pagination-bullet {
     row-gap: 2.5rem;
   }
 
+  .why-investors__item img {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+
   .why-investors__item {
     text-align: center;
   }
@@ -6624,8 +6627,17 @@ button.swiper-pagination-bullet {
     row-gap: 0.9375rem;
   }
 
-  .no-webp .main--park__item{
-    background: url("../img/requirements/ok.png") left center/20px 15px no-repeat; }
+  .main--park__item {
+    -webkit-column-gap: 1.875rem;
+       -moz-column-gap: 1.875rem;
+            column-gap: 1.875rem;
+    row-gap: 0.9375rem;
+  }
+
+  .main--park__item.animation {
+    -webkit-animation: right 0.2s 0.4s linear both;
+            animation: right 0.2s 0.4s linear both;
+  }
 
   .understand--park__items {
     -webkit-column-gap: 1.875rem;
@@ -6642,6 +6654,7 @@ button.swiper-pagination-bullet {
     -webkit-column-gap: 1.875rem;
        -moz-column-gap: 1.875rem;
             column-gap: 1.875rem;
+    row-gap: 0.9375rem;
   }
 
   .operation--park__left {
@@ -6655,12 +6668,14 @@ button.swiper-pagination-bullet {
     row-gap: 0.9375rem;
   }
 
-  .operation--park__item img {
-    width: 35px;
+  .operation--park__item {
+    -webkit-column-gap: 1.875rem;
+       -moz-column-gap: 1.875rem;
+            column-gap: 1.875rem;
   }
 
   .business--park__item:not(:first-child) {
-    padding-left: 0px;
+    padding-left: 0px !important;
     border: none;
   }
 
@@ -8128,6 +8143,18 @@ button.swiper-pagination-bullet {
     }
 }
 
+@supports (gap: clamp( 0.9375rem , 0.5985169492rem  +  1.6949152542vw , 2.1875rem )) {
+    .main--park__item {
+      gap: clamp( 0.9375rem , 0.5985169492rem  +  1.6949152542vw , 2.1875rem );
+    }
+}
+
+@supports not (gap: clamp( 0.9375rem , 0.5985169492rem  +  1.6949152542vw , 2.1875rem )) {
+    .main--park__item {
+      gap: calc(0.9375rem + 1.25 * (100vw - 20rem) / 73.75);
+    }
+}
+
 @supports (padding-bottom: clamp( 1.25rem , -0.4449152542rem  +  8.4745762712vw , 7.5rem )) {
     .understand--park {
       padding-bottom: clamp( 1.25rem , -0.4449152542rem  +  8.4745762712vw , 7.5rem );
@@ -9260,14 +9287,7 @@ button.swiper-pagination-bullet {
 
 .webp .requirements__list{ background: url(../img/requirements/ok.webp) left center/35px 26px no-repeat; }
 
-.webp .main--park__item{ background: url(../img/requirements/ok.webp) left center/24px 18px no-repeat; }
-
 @media (max-width: 47.99875em){
 
   .webp .requirements__list{ background: url(../img/requirements/ok.webp) left center/20px 15px no-repeat; }
-}
-
-@media (max-width: 47.99875em){
-
-  .webp .main--park__item{ background: url(../img/requirements/ok.webp) left center/20px 15px no-repeat; }
 }
