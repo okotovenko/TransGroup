@@ -5089,11 +5089,11 @@ button.swiper-pagination-bullet {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    height: 240px;
-    top: 100px;
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+    height: 240px !important;
+    top: 120px !important;
   }
 }
 
@@ -6703,16 +6703,6 @@ button.swiper-pagination-bullet {
 
   .main--polisy__text {
     padding-bottom: 0;
-  }
-}
-
-@media (max-width: 47.99875em) and (max-width: 20em) {
-  .main-investors__how {
-    top: 3.75rem;
-  }
-
-  .main-investors__how {
-    height: 14.375rem;
   }
 }
 
@@ -9171,7 +9161,7 @@ button.swiper-pagination-bullet {
 }
 }
 
-@media (max-width: 47.99875em) and (min-width: 93.75em) {
+@media (max-width: 47.99875em) and (min-width: 61.9375em) {
   .main-investors__how {
     top: 8.75rem;
   }
@@ -9181,28 +9171,28 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media (max-width: 47.99875em) and (min-width: 20em) and (max-width: 93.75em) {
-@supports (top: clamp( 3.75rem , 2.3940677966rem  +  6.7796610169vw , 8.75rem )) {
+@media (max-width: 47.99875em) and (min-width: 48em) and (max-width: 61.9375em) {
+@supports (top: clamp( 3.75rem , -13.4697309417rem  +  35.8744394619vw , 8.75rem )) {
     .main-investors__how {
-      top: clamp( 3.75rem , 2.3940677966rem  +  6.7796610169vw , 8.75rem );
+      top: clamp( 3.75rem , -13.4697309417rem  +  35.8744394619vw , 8.75rem );
     }
 }
 
-@supports not (top: clamp( 3.75rem , 2.3940677966rem  +  6.7796610169vw , 8.75rem )) {
+@supports not (top: clamp( 3.75rem , -13.4697309417rem  +  35.8744394619vw , 8.75rem )) {
     .main-investors__how {
-      top: calc(3.75rem + 5 * (100vw - 20rem) / 73.75);
+      top: calc(3.75rem + 5 * (100vw - 48rem) / 13.9375);
     }
 }
 
-@supports (height: clamp( 14.375rem , 12.3411016949rem  +  10.1694915254vw , 21.875rem )) {
+@supports (height: clamp( 14.375rem , -11.4545964126rem  +  53.8116591928vw , 21.875rem )) {
     .main-investors__how {
-      height: clamp( 14.375rem , 12.3411016949rem  +  10.1694915254vw , 21.875rem );
+      height: clamp( 14.375rem , -11.4545964126rem  +  53.8116591928vw , 21.875rem );
     }
 }
 
-@supports not (height: clamp( 14.375rem , 12.3411016949rem  +  10.1694915254vw , 21.875rem )) {
+@supports not (height: clamp( 14.375rem , -11.4545964126rem  +  53.8116591928vw , 21.875rem )) {
     .main-investors__how {
-      height: calc(14.375rem + 7.5 * (100vw - 20rem) / 73.75);
+      height: calc(14.375rem + 7.5 * (100vw - 48rem) / 13.9375);
     }
 }
 }
