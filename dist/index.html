@@ -11,7 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231201015549">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231203125438">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- Кодування сторінки: ширина області перегляду така ж, як і ширина екрану; зум за замовчуванням 100%; заборона масштабувати контент користувачу -->
@@ -57,12 +57,10 @@
 							<li class='menu__item'>
 								<a href='investors.html' class='menu__link'>Инвестиции</a>
 								<ul class="sub-menu__list">
-									<li class='menu__item'><a href='index.html' class='menu__sub-link'>Авто в управление</a></li>
-									<li class='menu__item'><a href='index.html' class='menu__sub-link'>Авто в управление</a></li>
-									<li class='menu__item'><a href='index.html' class='menu__sub-link'>Авто в управление</a></li>
+									<li class='menu__item'><a href='park.html' class='menu__sub-link'>Авто в управление</a></li>
 								</ul>
 							</li>
-							<li class='menu__item'><a href='park.html' class='menu__link'>Контакты</a></li>
+							<li class='menu__item'><a href='#' data-popup="#popup-contacts" class='menu__link'>Контакты</a></li>
 							<a href="#" data-popup="#popup" class="button button-blue">Консультация</a>
 						</ul>
 					</nav>
@@ -86,7 +84,7 @@
 								II с АКПП – автомат и других моделях комфорт-класса.
 							</p>
 						</div>
-						<a data-watch-threshold="0.5" data-watch-once data-watch href="#" class="main__button button button-blue">Выбрать авто в аренду!</a>
+						<a data-watch-threshold="0.5" data-watch-once data-watch data-popup="#popup" href="#" class="main__button button button-blue">Выбрать авто в аренду!</a>
 					</div>
 					<div class="main__right">
 						<div class="main__img">
@@ -193,7 +191,8 @@
 			</section>
 			<section class="page__started started">
 				<div class="started__container">
-					<div data-prlx-mouse data-prlx-cx="100" data-prlx-cy="500" data-prlx-dxy class="started__circle-big"></div>
+					<div data-prlx-mouse data-prlx-cx="100" data-prlx-cy="500" data-prlx-dxy class="started__circle-big">
+					</div>
 					<div data-watch-threshold="0.5" data-watch-once data-watch class="started__left">
 						<h3>Начни зарабатывать
 							уже завтра</h3>
@@ -201,7 +200,7 @@
 							<p>Оставь заявку, чтобы записаться
 								на тест-драйв и пройти собеседование</p>
 						</div>
-						<a href="#" class="started__button button button-white">Оставить заявку</a>
+						<a href="#" data-popup="#popup" class="started__button button button-white">Оставить заявку</a>
 					</div>
 					<div data-watch-threshold="0.5" data-watch-once data-watch class="started__right">
 						<picture><source srcset="img/started/decor.webp" type="image/webp"><img data-prlx-mouse data-prlx-cx="500" data-prlx-cy="500" data-prlx-dxy data-prlx-dxr class="started__decor" src="img/started/decor.png" alt="decor"></picture>
@@ -226,7 +225,7 @@
 									<li class="car__link">Расход 5-7 л.</li>
 									<li class="car__link">ОС</li>
 								</ul>
-								<a href="#" class="car__button button button-blue">тест-драйв</a>
+								<a href="#" data-popup="#popup" class="car__button button button-blue">тест-драйв</a>
 							</article>
 							<article class="car__item swiper-slide">
 								<div class="car__img">
@@ -240,7 +239,7 @@
 									<li class="car__link">Расход 5-7 л.</li>
 									<li class="car__link">ОС</li>
 								</ul>
-								<a href="#" class="car__button button button-blue">тест-драйв</a>
+								<a href="#" data-popup="#popup" class="car__button button button-blue">тест-драйв</a>
 							</article>
 							<article class="car__item swiper-slide">
 								<div class="car__img">
@@ -254,7 +253,7 @@
 									<li class="car__link">Расход 4-6 л.</li>
 									<li class="car__link">ОС</li>
 								</ul>
-								<a href="#" class="car__button button button-blue">тест-драйв</a>
+								<a href="#" data-popup="#popup" class="car__button button button-blue">тест-драйв</a>
 							</article>
 							<article class="car__item swiper-slide">
 								<div class="car__img">
@@ -268,7 +267,7 @@
 									<li class="car__link">Расход 5-7 л.</li>
 									<li class="car__link">ОС</li>
 								</ul>
-								<a href="#" class="car__button button button-blue">тест-драйв</a>
+								<a href="#" data-popup="#popup" class="car__button button button-blue">тест-драйв</a>
 							</article>
 							<article class="car__item swiper-slide">
 								<div class="car__img">
@@ -282,7 +281,7 @@
 									<li class="car__link">Расход 4-6 л.</li>
 									<li class="car__link">ОС</li>
 								</ul>
-								<a href="#" class="car__button button button-blue">тест-драйв</a>
+								<a href="#" data-popup="#popup" class="car__button button button-blue">тест-драйв</a>
 							</article>
 						</div>
 					</div>
@@ -369,7 +368,7 @@
 									и начать зарабатывать</p>
 							</div>
 						</div>
-						<a href="#" class="steps__button button button-white">Оставить <br> заявку</a>
+						<a href="#" data-popup="#popup" class="steps__button button button-white">Оставить <br> заявку</a>
 					</div>
 				</div>
 			</section>
@@ -483,8 +482,8 @@
 									в ближайшее время или звони напрямую!</p>
 							</div>
 							<div class="question__buttons">
-								<a href="#" class="question__button button button-white button-white-big">Оставить заявку</a>
-								<a href="#" class="question__button button button-white">Позвонить</a>
+								<a href="#" data-popup="#popup" class="question__button button button-white button-white-big">Оставить заявку</a>
+								<a href="tel: +48884953019" class="question__button button button-white">Позвонить</a>
 							</div>
 						</div>
 					</div>
@@ -497,12 +496,13 @@
 				<div class="footer__content">
 					<nav class='footer__body footer__body-1'>
 						<ul class='footer__list'>
-							<li class='footer__item'><a href='#' class='footer__link'>Работа в такси на авто компании</a></li>
-							<li class='footer__item'><a href='#' class='footer__link'>Инвестиции</a></li>
-							<li class='footer__item'><a href='#' class='footer__link'>Авто в управление</a></li>
+							<li class='footer__item'><a href='index.html' class='footer__link'>Работа в такси на авто компании</a>
+							</li>
+							<li class='footer__item'><a href='investors.html' class='footer__link'>Инвестиции</a></li>
+							<li class='footer__item'><a href='park.html' class='footer__link'>Авто в управление</a></li>
 							<li class='footer__item'><a href='polisy.html' class='footer__link'>Политика конфиденциальности</a></li>
 							<li class='footer__item'><a href='polisy.html' class='footer__link'>Пользовательское соглашение</a></li>
-							<li class='footer__item'><a href='#' class='footer__link'>Все права защищены © 2023</a></li>
+							<li class='footer__item'>Все права защищены © 2023</li>
 						</ul>
 					</nav>
 					<nav class='footer__body footer__body-2'>
@@ -527,12 +527,12 @@
 					<input type="hidden" name="form_subject" value="Тема листа">
 					<h2 class="title">Оставить заявку</h2>
 					<label class="form-label">
-						<span class="form__name">Ваше имя</span>
-						<input type="text" data-placeholder data-required data-error="Заполните поле" name="name" id="name" autocomplete="off" maxlength="255" data-error="Error" class="input" placeholder="Ім’я">
+						<span class="form__name">Имя, фамилия</span>
+						<input type="text" data-placeholder data-required data-error="Заполните поле" name="name" id="name" autocomplete="off" maxlength="255" data-error="Error" class="input" placeholder="Имя, фамилия">
 					</label>
 					<label class="form-label">
 						<span class="form__name" id="msg">Ваш телефон</span>
-						<input type="tel" data-placeholder data-required data-error="Заполните поле" name="tel" id="tel" autocomplete="off" maxlength="255" data-error="Error" class="input" placeholder="+38 (0__) ___-__-__" autocapitalize="off">
+						<input type="tel" data-placeholder data-required data-error="Заполните поле" name="tel" id="tel" autocomplete="off" maxlength="255" data-error="Error" class="input" placeholder="+48 ___-___-___" autocapitalize="off">
 					</label>
 					<p>Нажимая на кнопку "Отправить", я дяю соггласие на обработку моих персональных данных согласно <a class="form__polisy" href="polisy.html">политтике конфиденциальности</a>
 					</p>
@@ -541,11 +541,69 @@
 			</div>
 		</div>
 	</div>
+	<div id="popup-investors" aria-hidden="true" class="popup popup1">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<!-- data-ajax -->
+				<form action="components/sendmail/sendmail.php" data-dev data-popup-message="#popup-thanks" enctype="multipart/form-data" class="form" method="POST" id="form-investors">
+					<input type="hidden" name="form_subject" value="Тема листа">
+					<h2 class="title">Оставить заявку</h2>
+					<label class="form-label">
+						<span class="form__name">Имя, фамилия</span>
+						<input type="text" data-placeholder data-required data-error="Заполните поле" name="name-investors" id="name-investors" autocomplete="off" maxlength="255" data-error="Error" class="input" placeholder="Имя, фамилия">
+					</label>
+					<label class="form-label">
+						<span class="form__name" id="msgInvestors">Ваш телефон</span>
+						<input type="tel" data-placeholder data-required data-error="Заполните поле" name="tel-investors" id="tel-investors" autocomplete="off" maxlength="255" data-error="Error" class="input" placeholder="+48 ___-___-___" autocapitalize="off">
+					</label>
+					<label class="form-label">
+						<span class="form__name" id="span-budget-investors">Желаемый бюджет для инвестиций?</span>
+						<input type="number" data-placeholder data-required data-error="Заполните поле" name="budget-investors" id="budget-investors" autocomplete="off" maxlength="255" data-error="Error" class="input" placeholder="zł" autocapitalize="off">
+					</label>
+					<p>Нажимая на кнопку "Отправить", я дяю соггласие на обработку моих персональных данных согласно <a class="form__polisy" href="polisy.html">политтике конфиденциальности</a>
+					</p>
+					<button type="submit" class="button button-blue" id="button-investors">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="popup-management" aria-hidden="true" class="popup popup1">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<!-- data-ajax -->
+				<form action="components/sendmail/sendmail.php" data-dev data-popup-message="#popup-thanks" enctype="multipart/form-data" class="form" method="POST" id="form-investors">
+					<input type="hidden" name="form_subject" value="Тема листа">
+					<h2 class="title">Оставить заявку</h2>
+					<label class="form-label">
+						<span class="form__name">Имя, фамилия</span>
+						<input type="text" data-placeholder data-required data-error="Заполните поле" name="name-management" id="name-management" autocomplete="off" maxlength="255" data-error="Error" class="input" placeholder="Имя, фамилия">
+					</label>
+					<label class="form-label">
+						<span class="form__name" id="msgManagement">Ваш телефон</span>
+						<input type="tel" data-placeholder data-required data-error="Заполните поле" name="tel-management" id="tel-management" autocomplete="off" maxlength="255" data-error="Error" class="input" placeholder="+48 ___-___-___" autocapitalize="off">
+					</label>
+					<label class="form-label">
+						<span class="form__name" id="span-car-management">Количество автомобилей?</span>
+						<input type="number" data-placeholder data-required data-error="Заполните поле" name="car-management" id="car-management" autocomplete="off" maxlength="255" data-error="Error" class="input" placeholder="Количество автомобилей?" autocapitalize="off">
+					</label>
+					<label class="form-label">
+						<span class="form__name" id="span-brand-management">Марки автомобилей в автопарке?</span>
+						<input type="text" data-placeholder data-required data-error="Заполните поле" name="brand-management" id="brand-management" autocomplete="off" maxlength="255" data-error="Error" class="input" placeholder="Марки автомобилей в автопарке?" autocapitalize="off">
+					</label>
+					<p>Нажимая на кнопку "Отправить", я дяю соггласие на обработку моих персональных данных согласно <a class="form__polisy" href="polisy.html">политтике конфиденциальности</a>
+					</p>
+					<button type="submit" class="button button-blue" id="button-management">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
 	<div id="popup-thanks" aria-hidden="true" class="popup popup1 popup-thanks">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close"></button>
-				<h2 class="popup__title">Сообщение успешно отправлено!</h2>
+				<h2 class="popup__title">Благодарим за запрос! </h2>
 				<div class="popup__text">
 					<p>Мы свяжемся с вами в ближайшее время!
 					</p>
@@ -553,7 +611,23 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20231201015549"></script>
+	<div id="popup-contacts" aria-hidden="true" class="popup popup1 popup-contacts">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<h2 class="popup__title">Связаться с нами:</h2>
+				<div class="popup__phone">
+					<a class="popup__link" href="tel: +48884953019">+48 884 953 019</a>
+					<p>Denis</p>
+				</div>
+				<div class="popup__adress">
+					<p>Góralska 5, 53-610 Wroclaw </p>
+				</div>
+				<a class="popup__link" href="mailto: transgroup.poland@gmail.com">transgroup.poland@gmail.com</a>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20231203125438"></script>
 </body>
 
 </html>

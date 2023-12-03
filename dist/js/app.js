@@ -4498,8 +4498,14 @@
         }();
     }));
     var selector = document.getElementById("tel");
-    var im = new Inputmask("+38 (099) 999-99-99");
+    var im = new Inputmask("+48 999 999 999");
     im.mask(selector);
+    var selectorInvestors = document.getElementById("tel-investors");
+    im = new Inputmask("+48 999 999 999");
+    im.mask(selectorInvestors);
+    var selectorManagement = document.getElementById("tel-management");
+    im = new Inputmask("+48 999 999 999");
+    im.mask(selectorManagement);
     function ssr_window_esm_isObject(obj) {
         return obj !== null && typeof obj === "object" && "constructor" in obj && obj.constructor === Object;
     }
@@ -7614,8 +7620,11 @@
                     slidesPerView: 1,
                     spaceBetween: 20
                 },
-                1399: {
-                    slidesPerView: 2,
+                993: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                1299: {
                     spaceBetween: 20
                 },
                 1400: {
@@ -7647,8 +7656,11 @@
                     slidesPerView: 1,
                     spaceBetween: 20
                 },
-                1399: {
-                    slidesPerView: 2,
+                993: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                1299: {
                     spaceBetween: 20
                 },
                 1400: {
@@ -7810,7 +7822,11 @@
     }
     function addLabelForForm() {
         let myPhone = document.querySelector("#tel");
+        let myPhoneInvestors = document.querySelector("#tel-investors");
+        let myPhoneManagement = document.querySelector("#tel-management");
         let buttonSubmit = document.querySelector("#button");
+        let buttonSubmitInvestors = document.querySelector("#button-investors");
+        let buttonSubmitManagement = document.querySelector("#button-management");
         let length = 0;
         length = 0;
         myPhone.addEventListener("keyup", (function(evt) {
@@ -7822,6 +7838,28 @@
                 msg.textContent = "Ваш телефон";
                 msg.style.color = "#3E6C8F";
                 buttonSubmit.disabled = false;
+            }
+        }));
+        myPhoneInvestors.addEventListener("keyup", (function(evt) {
+            if (myPhoneInvestors.value.includes("_")) {
+                msgInvestors.textContent = "Заполните поле";
+                msgInvestors.style.color = "#F14545";
+                buttonSubmitInvestors.disabled = true;
+            } else if (!myPhoneInvestors.value.includes("_")) {
+                msgInvestors.textContent = "Ваш телефон";
+                msgInvestors.style.color = "#3E6C8F";
+                buttonSubmitInvestors.disabled = false;
+            }
+        }));
+        myPhoneManagement.addEventListener("keyup", (function(evt) {
+            if (myPhoneManagement.value.includes("_")) {
+                msgManagement.textContent = "Заполните поле";
+                msgManagement.style.color = "#F14545";
+                buttonSubmitManagement.disabled = true;
+            } else if (!myPhoneManagement.value.includes("_")) {
+                msgManagement.textContent = "Ваш телефон";
+                msgManagement.style.color = "#3E6C8F";
+                buttonSubmitManagement.disabled = false;
             }
         }));
     }
