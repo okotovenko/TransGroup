@@ -361,6 +361,7 @@ body::after {
 
 .popup__close {
   position: absolute;
+  border: none !important;
 }
 
 .popup__close::before,
@@ -371,6 +372,7 @@ body::after {
   width: 1px;
   height: 20px;
   background-color: #18476A;
+  border: none !important;
 }
 
 .popup__close::before {
@@ -387,6 +389,15 @@ body::after {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.popup__close:active,
+.popup__close:focus {
+  outline: none;
+}
+
+.popup__close::-moz-focus-inner {
+  border: 0;
 }
 
 .form {
