@@ -5788,7 +5788,6 @@ button.swiper-pagination-bullet {
     overflow: auto;
     background: #ffffff;
     z-index: 3;
-    display: block;
     margin-top: 6.125rem;
     padding-bottom: 9.375rem;
   }
@@ -5809,6 +5808,9 @@ button.swiper-pagination-bullet {
             flex-direction: column;
     padding-top: 0px;
     gap: 1.875rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 
   .menu__item {
